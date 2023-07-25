@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const FormLayout = styled.div`
-  font-family: "Roboto";
   font-style: normal;
   display: flex;
   flex-direction: column;
@@ -44,10 +43,9 @@ export const Form = styled.form`
 `;
 
 export const LoginLabel = styled.label`
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 24px;
   line-height: 1.16;
   text-align: left;
   color: var(--main-white);
@@ -56,7 +54,7 @@ export const LoginLabel = styled.label`
 
 export const LoginInput = styled.input`
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.14;
   letter-spacing: 0.04em;
   background-color: var(--third-opacity);
@@ -64,16 +62,17 @@ export const LoginInput = styled.input`
   height: 50px;
   padding: 0 20px;
   border-radius: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 
 export const ErrorText = styled.span`
+  font-size: 14px;
   display: flex;
   position: absolute;
-  top: 80px;
-  color:var(--main-error);
+  top: 100px;
+  color: var(--main-error);
 
   &:last-of-type {
-    top: 186px;
+    top: 240px;
   }
 `;
