@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import ButtonStyled from "./MainButton.styled";
 
 function MainButton({ children, ...props }) {
@@ -9,8 +8,5 @@ function MainButton({ children, ...props }) {
   );
 }
 
-MainButton.propTypes = {
-  children: PropTypes.string,
-};
 
 export default MainButton;
