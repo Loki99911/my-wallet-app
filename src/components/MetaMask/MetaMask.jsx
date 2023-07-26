@@ -9,8 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 
-export const MetaMask = ({provider}) => {
-  const [account, setAccount] = useState("");
+export const MetaMask = ({ newProvider }) => {
+   const [account, setAccount] = useState("");
   const [balance, setBalance] = useState(0);
   const [signer, setSigner] = useState(null);
   const [logInSpinner, setLogInSpinner] = useState(false);
@@ -19,9 +19,9 @@ export const MetaMask = ({provider}) => {
   const connectToMetaMask = async () => {
     try {
       setLogInSpinner(true);
-      const signerCreated = provider.getSigner();
+      const signerCreated = newProvider.getSigner();
       setSigner(signerCreated);
-      await provider.send("eth_requestAccounts", []);
+      await newProvider.send("eth_requestAccounts", []);
 
       const myAddress = await signerCreated.getAddress();
       setAccount(myAddress);

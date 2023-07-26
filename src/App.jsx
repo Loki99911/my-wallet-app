@@ -1,3 +1,4 @@
+import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { MetaMaskInstallPrompt } from "./components/MetaMaskInstallPrompt/MetaMaskInstallPrompt";
@@ -7,8 +8,8 @@ import { MetaMask } from "./components/MetaMask/MetaMask";
 
 function App() {
   const [showPrompt, setShowPrompt] = useState(false);
-  let provider;
-
+  const [provider, setProvider] = useState(false);
+  
   useEffect(() => {
     const checkMetaMask = async () => {
       try {
@@ -17,22 +18,23 @@ function App() {
           setShowPrompt(true);
           return;
         }
-        provider = new ethers.providers.Web3Provider(window.ethereum);
+        const newProvider = new ethers.providers.Web3Provider(window.ethereum);
+        setProvider(newProvider);
+        
       } catch (error) {
         console.log(error);
       }
-      
     };
 
     checkMetaMask();
   }, []);
-  
+
   return (
     <>
       {showPrompt ? (
         <MetaMaskInstallPrompt />
       ) : (
-        <MetaMask provider={provider} />
+        <MetaMask newProvider={provider} />
       )}
     </>
   );

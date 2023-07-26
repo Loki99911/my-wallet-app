@@ -14,7 +14,7 @@ export const HeaderComp = ({ account, balance, connectToMetaMask, loader }) => {
       <HeaderLogo>Ethereum walet</HeaderLogo>
       {account === "" && (
         <MainButton onClick={handleConnectWallet}>
-          {loader ? <Spinner/> : "Connect wallet"}
+          {loader ? <Spinner/> : <span>Connect wallet</span>}
         </MainButton>
       )}
       {account !== "" && (
