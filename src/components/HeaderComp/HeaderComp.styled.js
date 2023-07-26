@@ -13,6 +13,13 @@ export const HeaderWpapper = styled.header`
     justify-content: center;
   }
 `;
+
 export const HeaderLogo = styled.h1`
   color: var(--main-blue);
+`;
+
+export const HeaderBalance = styled.span`
+  font-size: 20px;
+  font-weight: 600;
+  color: ${(props) => (parseInt(props.children, 10) > 0 ? "#5aeb50" : "red")};
 `;

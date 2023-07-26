@@ -9,8 +9,9 @@ import {
   ErrorText,
 } from "./TransferForm.styled";
 import MainButton from "../MainButton/MainButton";
+import { Spinner } from "../Spinner/Spinner";
 
-const TransferForm = ({ sendEthereum, account }) => {
+const TransferForm = ({ sendEthereum, account, loader }) => {
   const addressID = shortid.generate();
   const quantityID = shortid.generate();
 
@@ -23,7 +24,7 @@ const TransferForm = ({ sendEthereum, account }) => {
     ) {
       return false;
     }
-    console.log(Number.isInteger(quantity * ethereumMultiple));
+
     return (
       Number.isInteger(quantity * ethereumMultiple) &&
       (quantity * 1000000) % 10 === 0
@@ -92,9 +93,9 @@ const TransferForm = ({ sendEthereum, account }) => {
             </ErrorText>
             <MainButton
               type="submit"
-              disabled={Object.keys(errors).length > 0 || account===""}
+              disabled={Object.keys(errors).length > 0 || account === ""}
             >
-              Confirm
+              {loader ? <Spinner /> : "Confirm"}
             </MainButton>
           </Form>
         )}

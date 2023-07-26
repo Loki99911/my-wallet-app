@@ -9,7 +9,7 @@ export const FooterComp = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub style={{ fontSize: "36px"}} />
+          <FaGithub size={36} />
         </FooterLink>
       </FooterWrapper>
     </>

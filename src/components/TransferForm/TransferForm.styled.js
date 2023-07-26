@@ -13,7 +13,7 @@ export const FormLayout = styled.div`
   color: var(--main-black);
 
   @media screen and (min-width: 768px) {
-    width: 425px;
+    width: 300px;
     padding: 55px 85px;
   }
   @media screen and (min-width: 1280px) {

@@ -1,6 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const ButtonStyled = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 36px;
   padding: 12px auto;
   border-radius: 8px;
