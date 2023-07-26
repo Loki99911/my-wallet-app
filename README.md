@@ -11,7 +11,7 @@ Good luck!
 
 ## Technologies
 
-The project is built with [React](https://react.dev/) with Vite [Vite](https://vitejs.dev/) build tool to interact with the [MetaMask](https://metamask.io/) and styled by [Styled-components](https://styled-components.com/). To create and validate form used [Formik](https://formik.org/)
+The project is built with [React](https://react.dev/) using [Vite](https://vitejs.dev/) build tool to interact with the [MetaMask](https://metamask.io/) and styled by [Styled-components](https://styled-components.com/). To create and validate form used [Formik](https://formik.org/)
 ***
 
 ## Developed by:
